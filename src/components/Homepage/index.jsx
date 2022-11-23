@@ -15,9 +15,7 @@ const Homepage = () => {
       <p> Nejnovejsi premiove produkty od prednich ceskych designeru.</p>
       <p> Doprava zdarma az k vam domu, na cenu nehledte </p>
 
-      <ul> 
-   
-      </ul>
+    
       
         </>
     )

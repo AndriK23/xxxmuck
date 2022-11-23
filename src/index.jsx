@@ -8,11 +8,12 @@ import { useState,useEffect } from 'react';
 
 
 
+
 const App = () => {
 
   const [name,setName] = useState([])
 
-  
+
  
 
   useEffect ( ( ) => {
@@ -20,21 +21,25 @@ const App = () => {
       .then( response => response.json())
       .then( (apiData) => {
           setName(apiData)
-      })
+      }
+      )
 
   }, [] )
 
   console.log(name)
+  
 
   return (
     <div className="container">
+      <Homepage />
 
-    { name && 
-    <p> blah </p>
-    }   
-   
-    <Homepage />
-
+      {name.map((prvek) => {
+        return (
+          <>
+            <h2 key={prvek.id}> {prvek.name} </h2>
+          </>
+        );
+      })}
     </div>
   );
 };
